@@ -10,4 +10,4 @@
 </head>
 
 <body>
-    <?php include('siderbar.php'); ?>
+    <?php include('sidebar.php'); ?>
