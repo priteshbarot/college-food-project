@@ -2,7 +2,7 @@
 <?php include('../../utils/check_session.php'); ?>
 <?php include('../../components/header.php'); ?>
 <?php include('./../components/sidebar.php'); ?>
-<div class="ml-[25%]">
+<div class="ml-[20%]">
     <section class="bg-white">
         <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
             <?php include('../../components/alert.php'); ?>

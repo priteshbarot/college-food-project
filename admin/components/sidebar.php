@@ -1,6 +1,6 @@
 <?php include('../constants/index.php'); ?>
 <?php $activeUrl = getActiveUrl(); ?>
-<aside class="fixed top-0 left-0 w-[25%] h-full" aria-label="Sidenav">
+<aside class="fixed top-0 left-0 w-[20%] h-full" aria-label="Sidenav">
     <div
         class="overflow-y-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <ul class="space-y-2">
