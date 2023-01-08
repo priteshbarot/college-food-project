@@ -7,6 +7,17 @@
     <title>Food Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
 <body>
