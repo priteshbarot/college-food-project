@@ -12,18 +12,25 @@
 
   $sql = "SELECT * FROM admins WHERE email = '$email'";
   $res = mysqli_query($con,$sql);
-  $arr = mysqli_fetch_assoc($res);
-  $pass = $arr['password'];
-  $row = password_verify($new_pass,$pass);
-  if($row){
-    $_SESSION['session_state'] = 'active';
-    $_SESSION['fullname']= $arr['fullname'];
-    header('Location: ../admin/dashboard.php');
+  if($res && mysqli_num_rows($res)){
+    $arr = mysqli_fetch_assoc($res);
+    $pass = $arr['password'];
+    $row = password_verify($new_pass,$pass);
+    if($row){
+      $_SESSION['session_state'] = 'active';
+      $_SESSION['fullname']= $arr['fullname'];
+      header('Location: ../admin/dashboard.php');
+    }
+    else{
+      $error="incorrect password or username.";
+      header('Location: ../admin/index.php?error='.$error.'');
+    }
   }
   else{
     $error="incorrect password or username.";
     header('Location: ../admin/index.php?error='.$error.'');
   }
+  
  
  } catch (\Throwable $th) {
     print_r($th);

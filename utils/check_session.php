@@ -7,7 +7,7 @@ try {
     if(isset($_SESSION['fullname']) && ($active_url[3]==''||$active_url[3]=='index.php')){
         header('Location: ../admin/dashboard.php');
     }
-    elseif(($active_url[3]!='' && $active_url[3]!='login.php') && !isset($_SESSION['fullname'])){
+    elseif(($active_url[3]!='' && $active_url[3]!='index.php' && !isset($_GET['error'])) && !isset($_SESSION['fullname'])){
         header('Location: ../admin');
     }
     else{
