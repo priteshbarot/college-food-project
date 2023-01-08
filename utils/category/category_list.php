@@ -8,6 +8,12 @@
         $res = mysqli_query($con,$sql);
         return ceil(mysqli_num_rows($res)/5);
     }
+
+    function getCategoryList($con){
+        $sql = 'select * from categories order by id desc';
+        $res = mysqli_query($con, $sql);
+        return $res;
+    }
     
     function getCategoryListPaginate($con,$page){
         $sql = 'select * from categories order by id desc limit '.($page*5).',5';
