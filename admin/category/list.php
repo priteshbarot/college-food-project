@@ -4,7 +4,6 @@
 <?php $totalPages = getTotalPages($con); ?>
 <?php $category_list = getCategoryListPaginate($con,$page); ?>
 <?php $nextPage =$page+1; $prevPage = $page-1 ?>
-<?php print_r($nextPage." "); print_r($prevPage); ?>
 <?php include('../../components/header.php'); ?>
 <?php include('./../components/sidebar.php'); ?>
 <div class="ml-[20%]">

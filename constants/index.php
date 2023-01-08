@@ -14,7 +14,7 @@ function checkActiveSection($section){
 
 function checkActivePage($page){
     $activeUrl = getActiveUrl();
-    return $activeUrl["page_type"] && $activeUrl["page_type"]==$page;
+    return $activeUrl["page_type"] && strpos($activeUrl["page_type"], $page) !== false;
 }
 
 ?>
