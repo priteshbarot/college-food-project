@@ -10,7 +10,7 @@
     }
     
     function getCategoryListPaginate($con,$page){
-        $sql = 'select * from categories limit '.($page*5).',5';
+        $sql = 'select * from categories order by id desc limit '.($page*5).',5';
         $res = mysqli_query($con,$sql);
         return $res;
     }

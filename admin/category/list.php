@@ -33,8 +33,10 @@
                             <?php echo $row['category_desc']; ?>
                         </td>
                         <td class="px-6 py-4">
-                            <a href="#" class="font-medium text-blue-600 hover:underline pr-8">Edit</a>
-                            <a href="#" class="font-medium text-red-600 hover:underline">Delete</a>
+                            <a href="<?php echo $url.'admin/category/update.php?id='.$row['id']; ?>"
+                                class="font-medium text-blue-600 hover:underline pr-8">Edit</a>
+                            <a href="<?php echo $url.'utils/category/category_delete.php?id='.$row['id']; ?>"
+                                class="font-medium text-red-600 hover:underline">Delete</a>
                         </td>
                     </tr>
                     <?php } ?>
